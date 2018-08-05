@@ -15,7 +15,7 @@ module.exports = {
   },
   "snapshotSerializers": [
   ],
-  "collectCoverage": true,
+  "collectCoverage": false,
   "collectCoverageFrom": [
     "**/*.{js}",
     "!**/node_modules/**"

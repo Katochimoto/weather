@@ -31,6 +31,8 @@
     "css-mqpacker": "7.0.0",
     "cssnano-preset-advanced": "4.0.0",
     "dependency-check": "3.2.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "5.1.0",
     "eslint-config-yandex": "1.0.6",
     "eslint-loader": "2.1.0",
