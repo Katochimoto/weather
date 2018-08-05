@@ -1,0 +1,19 @@
+@import "../../style";
+
+.hour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0 1em;
+
+  & > div:not(:last-shild) {
+    padding-bottom: 0.5em;
+  }
+
+  &_day {
+    &:not(:first-of-type) {
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+}

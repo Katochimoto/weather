@@ -1,0 +1,19 @@
+{
+    "presets": [
+        ["env", { "loose": true, "modules": false }],
+        "react",
+        "stage-0"
+    ],
+    "plugins": [
+        "transform-react-jsx-img-import",
+        "transform-object-rest-spread",
+        "transform-runtime"
+    ],
+    "env": {
+        "test": {
+            "presets": [
+                ["env", { "targets": { "node": "current" }}]
+            ]
+        }
+    }
+}

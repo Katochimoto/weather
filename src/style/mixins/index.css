@@ -1,0 +1,26 @@
+@define-mixin placeholder {
+  &::-webkit-input-placeholder {
+    @mixin-content;
+  }
+
+  &::-moz-placeholder {
+    @mixin-content;
+  }
+
+  &:-ms-input-placeholder {
+    @mixin-content;
+  }
+
+  &:-moz-placeholder {
+    @mixin-content;
+  }
+
+  &::placeholder {
+    @mixin-content;
+  }
+}
+
+@define-mixin transition {
+  transition-property: color, border-color, background-color, box-shadow;
+  transition-duration: 0.2s;
+}

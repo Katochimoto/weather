@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@import "../../node_modules/normalize-css/normalize.css";
+/* @import "./fonts/index.css"; */
+@import "./global.css";
+
+@font-face {
+  font-family: 'Quicksand';
+  font-display: swap;
+  src: url('./fonts/QuicksandBook-Regular.eot');
+  src: url('./fonts/QuicksandBook-Regular.woff2') format('woff2'),
+       url('./fonts/QuicksandBook-Regular.woff') format('woff'),
+       url('./fonts/QuicksandBook-Regular.ttf') format('truetype'),
+       url('./fonts/QuicksandBook-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  font-display: swap;
+  src: url('./fonts/QuicksandLight-Regular.eot');
+  src: url('./fonts/QuicksandLight-Regular.woff2') format('woff2'),
+       url('./fonts/QuicksandLight-Regular.woff') format('woff'),
+       url('./fonts/QuicksandLight-Regular.ttf') format('truetype'),
+       url('./fonts/QuicksandLight-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+

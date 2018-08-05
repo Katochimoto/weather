@@ -1,0 +1,17 @@
+@import "../../style";
+
+.nomatch {
+
+}
+
+.nomatch-header {
+  color: #fff;
+}
+
+.nomatch-back {
+  color: #fff;
+}
+
+.nomatch-content {
+  text-align: center;
+}
