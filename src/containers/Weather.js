@@ -6,7 +6,7 @@ const mapStateToProps = state => ({
   status: selectStatus(state)
 })
 
-const mapDispatchToProps = (dispatch) => ({})
+const mapDispatchToProps = () => ({})
 
 const Location = connect(
   mapStateToProps,

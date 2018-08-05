@@ -76,6 +76,7 @@ function* refreshForecast () {
 
     yield fetchForecast({ location })
   } catch (error) {
+    // no-empty
   }
 }
 

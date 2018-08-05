@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Icon from '../Icon'
 import style from './index.css'
 import { WeatherLocation } from '../../data/services'
@@ -57,3 +58,9 @@ export default class SelectLoaction extends React.Component {
     )
   }
 }
+
+SelectLoaction.propTypes = {
+  onChange: PropTypes.func,
+}
+
+SelectLoaction.defaultProps = {}

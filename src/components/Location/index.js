@@ -45,6 +45,7 @@ const Location = ({
 Location.propTypes = {
   location: PropTypes.object,
   handleChange: PropTypes.func,
+  handleRefresh: PropTypes.func,
 }
 
 export default Location

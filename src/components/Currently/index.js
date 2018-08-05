@@ -1,4 +1,5 @@
 import classnames from 'classnames'
+import PropTypes from 'prop-types'
 import Icon from '../Icon'
 import style from './index.css'
 import Temperature from '../../containers/Temperature'
@@ -48,3 +49,13 @@ export default function Currently ({
     </section>
   )
 }
+
+Currently.propTypes = {
+  className: PropTypes.string,
+  currently: PropTypes.object,
+  location: PropTypes.object,
+  settings: PropTypes.object,
+  handleChangeScale: PropTypes.func,
+}
+
+Currently.defaultProps = {}

@@ -1,17 +1,6 @@
 import axios from 'axios'
 import cloneDeepWith from 'lodash/cloneDeepWith'
 
-
-// https://console.developers.google.com/apis/credentials?project=weather-212312
-
-// https://developers.google.com/maps/documentation/geocoding/intro
-// https://maps.googleapis.com/maps/api/geocode/json?address=Moscow
-
-
-// https://developers.google.com/places/web-service/autocomplete
-// https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Mosc&key=AIzaSyA_2l1_143MCOcHGMKab_amynEyYJQEFYw
-// https://maps.googleapis.com/maps/api/place/autocomplete/json?input=Vict&types=(cities)&language=pt_BR&key=YOUR_API_KEY
-
 const darksky = axios.create({
   baseURL: '/api',
   timeout: 2500,
@@ -66,7 +55,7 @@ export function getForecast (latitude, longitude) {
 export function getLocation (latitude, longitude) {
   return new Promise((resolve, reject) => {
     const geocoder = new window.google.maps.Geocoder()
-    const latlng = {lat: latitude, lng: longitude};
+    const latlng = { lat: latitude, lng: longitude }
 
     geocoder.geocode({ location: latlng }, function(results, status) {
       if (status !== 'OK' || !results[0]) {
@@ -89,7 +78,7 @@ export function getLocation (latitude, longitude) {
 
         resolve(new WeatherLocation(place))
       })
-    });
+    })
   })
 }
 

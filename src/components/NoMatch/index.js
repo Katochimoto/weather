@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-import style from './index.css';
+import style from './index.css'
 
 export default function NoMatch () {
 
@@ -13,5 +13,5 @@ export default function NoMatch () {
         </p>
       </div>
     </div>
-  );
+  )
 }

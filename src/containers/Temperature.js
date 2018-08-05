@@ -6,7 +6,7 @@ const mapStateToProps = state => {
   return { settings, }
 }
 
-const mapDispatchToProps = (dispatch) => ({})
+const mapDispatchToProps = () => ({})
 
 function Component ({
   settings,

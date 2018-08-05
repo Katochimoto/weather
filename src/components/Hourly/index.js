@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Hour from '../Hour'
 import Icon from '../Icon'
 import style from './index.css'
@@ -51,4 +52,11 @@ export default function Hourly ({
       </div>
     </section>
   )
+}
+
+Hourly.propTypes = {
+  location: PropTypes.object,
+  hourly: PropTypes.object,
+  settings: PropTypes.object,
+  handleChangeHourly: PropTypes.func,
 }

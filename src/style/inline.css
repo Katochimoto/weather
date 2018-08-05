@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 @import "../../node_modules/normalize-css/normalize.css";
-/* @import "./fonts/index.css"; */
 @import "./global.css";
 
 @font-face {

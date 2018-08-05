@@ -1,4 +1,5 @@
 import classnames from 'classnames'
+import PropTypes from 'prop-types'
 import Icon from '../Icon'
 import Clock from '../Clock'
 import Temperature from '../../containers/Temperature'
@@ -13,20 +14,20 @@ export default function Hour ({
   let ico = null
 
   switch (settings.hourly) {
-    case 'humidity':
-      info = `${data.humidity}%`
-      ico = <Icon name={data.icon} size="m" />
-      break
-    case 'temperature':
-      info = <Temperature value={data.temperature} />
-      ico = <Icon name={data.icon} size="m" />
-      break
-    case 'wind':
-      info = `${data.windSpeed}`
-      ico = <Icon name="wi-wind-deg" size="m" icoStyle={{
-        transform: `rotate(${data.windBearing}deg)`
-      }} />
-      break
+  case 'humidity':
+    info = `${data.humidity}%`
+    ico = <Icon name={data.icon} size="m" />
+    break
+  case 'temperature':
+    info = <Temperature value={data.temperature} />
+    ico = <Icon name={data.icon} size="m" />
+    break
+  case 'wind':
+    info = `${data.windSpeed}`
+    ico = <Icon name="wi-wind-deg" size="m" icoStyle={{
+      transform: `rotate(${data.windBearing}deg)`
+    }} />
+    break
   }
 
   return (
@@ -46,3 +47,11 @@ export default function Hour ({
     </div>
   )
 }
+
+Hour.propTypes = {
+  location: PropTypes.object,
+  data: PropTypes.object,
+  settings: PropTypes.object,
+}
+
+Hour.defaultProps = {}

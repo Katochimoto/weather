@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Day from '../Day'
 import style from './index.css'
 
@@ -43,3 +44,12 @@ export default function Forecast ({
     </section>
   )
 }
+
+Forecast.propTypes = {
+  location: PropTypes.object,
+  daily: PropTypes.object,
+  settings: PropTypes.object,
+  handleForecastDays: PropTypes.func,
+}
+
+Forecast.defaultProps = {}

@@ -1,0 +1,46 @@
+{
+  "processors": ["stylelint-processor-html"],
+  "extends": [
+    "stylelint-config-standard",
+  ],
+  "rules": {
+    "no-empty-source": null,
+    "selector-pseudo-class-no-unknown": [true, {
+      "ignorePseudoClasses": ["global"]
+    }],
+    "property-no-unknown": [true, {
+      "ignoreProperties": [
+        "font-smoothing",
+        "tap-highlight-color",
+        "lost-align",
+        "lost-center",
+        "lost-column",
+        "lost-flex-container",
+        "lost-masonry-column",
+        "lost-masonry-wrap",
+        "lost-move",
+        "lost-offset",
+        "lost-row",
+        "lost-unit",
+        "lost-utility",
+        "lost-waffle",
+      ]
+    }],
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": [
+        "lost",
+        "mixin",
+        "define-mixin",
+        "global-import",
+        "mixin-content",
+      ],
+    }],
+    "selector-type-no-unknown": [true, {
+      "ignoreTypes": [
+        "/\\^/",
+        "_"
+      ],
+    }],
+  },
+  "ignoreFiles": "./dist/**"
+}

@@ -10,7 +10,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const CompressionPlugin = require('compression-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const SriPlugin = require('webpack-subresource-integrity');
@@ -55,6 +54,12 @@ const config = {
 
   module: {
     rules: [
+      {
+        enforce: 'pre',
+        test: /\.(js)$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
       {
         test: /\.js$/,
         exclude: [
@@ -212,16 +217,6 @@ const config = {
       hashDigest: 'hex',
       hashDigestLength: 20
     }),
-    new CopyWebpackPlugin([
-      {
-        from: 'robots.txt',
-        to: distPath
-      },
-      {
-        from: 'sitemap.xml',
-        to: distPath
-      }
-    ]),
     new WebpackPwaManifest({
       filename: 'manifest.json',
       name: 'Weather',

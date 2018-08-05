@@ -24,20 +24,9 @@ window.addEventListener('load', () => {
 })
 
 // @if NODE_ENV='production'
-(function () {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js', {
-      scope: '/'
-    })
-  }
- }())
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js', {
+    scope: '/'
+  })
+}
 // @endif
-
-
-// if ('geolocation' in navigator) {
-//   // navigator.geolocation.getCurrentPosition(position => {
-//   //   console.log(position)
-//   // })
-
-
-// }

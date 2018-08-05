@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import moment from 'moment-timezone'
 
-const getDate = date => date ? new Date(date).getTime() : new Date().getTime();
+const getDate = date => date ? new Date(date).getTime() : new Date().getTime()
 
 export default class Clock extends React.Component {
   componentDidMount() {
@@ -20,7 +20,7 @@ export default class Clock extends React.Component {
   }
 
   render() {
-    const {children, className, date, format, timezone, utcOffset} = this.props
+    const { children, className, date, format, timezone, utcOffset } = this.props
     const utcOffsetDefined = typeof utcOffset === 'number'
     let dateValue = getDate(date || children)
 
@@ -36,11 +36,11 @@ export default class Clock extends React.Component {
       localizedTime.tz(timezone)
     }
 
-    const formattedTime = localizedTime.format(format);
+    const formattedTime = localizedTime.format(format)
 
     return (
       <time className={className}>{ formattedTime }</time>
-    );
+    )
   }
 }
 
@@ -56,7 +56,7 @@ Clock.propTypes = {
   ticking: PropTypes.bool,
   timezone: PropTypes.string,
   utcOffset: PropTypes.number,
-};
+}
 
 Clock.defaultProps = {
   className: null,
@@ -66,4 +66,4 @@ Clock.defaultProps = {
   ticking: false,
   timezone: '',
   utcOffset: 0,
-};
+}

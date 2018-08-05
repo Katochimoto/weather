@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Location from '../../containers/Location'
 import Currently from '../../containers/Currently'
 import Hourly from '../../containers/Hourly'
@@ -26,5 +27,11 @@ export default function Weather ({
         ) : null}
       </div>
     </div>
-  );
+  )
 }
+
+Weather.propTypes = {
+  status: PropTypes.string,
+}
+
+Weather.defaultProps = {}
