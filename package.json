@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "repository": "git@github.com:Katochimoto/weather.git",
   "author": "Katochimoto <bufpost@yandex.ru>",
+  "homepage": "https://rikishi.info/weather",
   "license": "MIT",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
-    "build": "cross-env NODE_ENV=production webpack -p",
+    "build": "cross-env NODE_ENV=production webpack -p; yarn run pack",
     "check": "dependency-check ./package.json --entry ./src/main.js --unused",
-    "test": "jest"
+    "test": "jest",
+    "pack": "tar -czvf rikishi-info-weather.tar.gz -C ./dist ."
   },
   "devDependencies": {
     "babel-core": "6.26.3",

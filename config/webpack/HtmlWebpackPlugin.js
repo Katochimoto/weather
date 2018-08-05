@@ -1,14 +1,7 @@
-var fs = require('fs');
-var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = function (config, options) {
   config = config || {};
-
-  // var symbols = path.join(process.cwd(), 'node_modules/icons/dist/svg/symbols.svg');
-  // var svgIcons = fs.readFileSync(symbols, 'utf-8');
-
-  // config.svgIcons = svgIcons;
 
   if (!options.isDev) {
     config.minify = {
@@ -22,38 +15,35 @@ module.exports = function (config, options) {
     };
   }
 
-  // config.links = [
-  //   {
-  //     rel: 'preconnect',
-  //     href: 'https://www.googletagmanager.com'
-  //   },
-  //   {
-  //     rel: 'preconnect',
-  //     href: 'https://www.google-analytics.com'
-  //   },
-  //   {
-  //     rel: 'preconnect',
-  //     href: 'https://s.gravatar.com'
-  //   }
-  // ];
+  config.links = [
+    {
+      rel: 'preconnect',
+      href: 'https://api.hostmon.ru'
+    },
+    {
+      rel: 'preconnect',
+      href: 'https://maps.googleapis.com'
+    }
+  ];
 
   config.meta = [
-    // {
-    //   'http-equiv': 'Content-Security-Policy',
-    //   content: options.isDev ? "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *" :
-    //     "default-src 'self';" +
-    //     "connect-src 'self' https://pgp.mit.edu;" +
-    //     "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;" +
-    //     "img-src 'self' data: https://www.google-analytics.com;" + // data: https://s.gravatar.com
-    //     // "font-src 'self' data:;" +
-    //     "object-src 'none';" +
-    //     "child-src 'none';" + // deprecated
-    //     "frame-src 'none';" +
-    //     "form-action 'self';" +
-    //     "upgrade-insecure-requests;" +
-    //     "block-all-mixed-content;" +
-    //     "base-uri " + config.baseHref || '/'
-    // },
+    {
+      'http-equiv': 'Content-Security-Policy',
+      content: options.isDev ? "default-src 'self' 'unsafe-inline' 'unsafe-eval' data: *" :
+        "default-src 'self';" +
+        "connect-src 'self' https://api.hostmon.ru https://maps.googleapis.com;" +
+        "script-src 'self' 'unsafe-inline' https://maps.googleapis.com;" +
+        "img-src 'self' data: https://www.google-analytics.com https://maps.gstatic.com;" +
+        "style-src 'self' 'unsafe-inline';" +
+        // "font-src 'self' data:;" +
+        "object-src 'none';" +
+        "child-src 'none';" + // deprecated
+        "frame-src 'none';" +
+        "form-action 'self';" +
+        "upgrade-insecure-requests;" +
+        "block-all-mixed-content;" +
+        "base-uri " + config.baseHref || '/'
+    },
     {
       'http-equiv': 'X-XSS-Protection',
       content: '1;mode=block'

@@ -208,6 +208,7 @@ const config = {
     (isDev ? null : new webpack.optimize.OccurrenceOrderPlugin()),
     new webpack.LoaderOptionsPlugin({ minimize: true, debug: false }),
     new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new webpack.ProvidePlugin({
       'React': 'react',
       'ReactDOM': 'react-dom',
@@ -227,7 +228,7 @@ const config = {
       display: 'minimal-ui',
       lang: 'en-US',
       orientation: 'any',
-      scope: '/',
+      scope: '/weather/',
       start_url: '/?utm_source=web_app_manifest',
       icons: [{
         src: path.join(srcPath, 'images', 'avatar.png'),
@@ -291,7 +292,7 @@ const config = {
       isDev: isDev
     }),
     (isDev ? new HtmlWebpackHarddiskPlugin() : null),
-    new InlineCSP({ disable: isDev }),
+    // new InlineCSP({ disable: isDev }),
     new SriPlugin({
       hashFuncNames: ['sha256', 'sha384'],
       enabled: !isDev

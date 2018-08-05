@@ -2,7 +2,7 @@ import axios from 'axios'
 import cloneDeepWith from 'lodash/cloneDeepWith'
 
 const darksky = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://api.hostmon.ru/api',
   timeout: 2500,
 })
 
