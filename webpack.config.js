@@ -229,7 +229,7 @@ const config = {
       lang: 'en-US',
       orientation: 'any',
       scope: '/weather/',
-      start_url: '/?utm_source=web_app_manifest',
+      start_url: '/weather/?utm_source=web_app_manifest',
       icons: [{
         src: path.join(srcPath, 'images', 'avatar.png'),
         sizes: [96, 128, 192, 256, 512],
