@@ -23,11 +23,11 @@
       border: 0;
       padding: 0;
       margin: 0;
-      color: #888;
+      color: var(--color-link);
 
       &:disabled,
       &:hover {
-        color: #fff;
+        color: var(--color-link-hover);
       }
     }
   }

@@ -6,5 +6,5 @@
 }
 
 .loading-icon {
-  color: #fff;
+  color: var(--color);
 }

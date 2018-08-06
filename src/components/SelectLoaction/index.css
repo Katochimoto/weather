@@ -9,13 +9,13 @@
 
   &_control {
     border: 0;
-    color: #fff;
+    color: var(--color);
     background: transparent;
     font-size: 1em;
     outline: none;
 
     @mixin placeholder {
-      color: #fff;
+      color: var(--color);
     }
   }
 }

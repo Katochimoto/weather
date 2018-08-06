@@ -16,15 +16,6 @@
 @custom-selector :--strong strong, b;
 
 :root {
-	--z-index-base: 10000;
-	--duration-transition: 0.2s;
-	--duration-bg: 1.75s;
-	--duration-main: 1s;
-	--size-border-radius: 4px;
-	--size-border-width: 1px;
-	--size-element-height: 2.75em;
-	--size-element-margin: 1.5em;
-	--size-letter-spacing: 0.1em;
 	--font-size: 16px;
   --line-height: 1.15;
   --form-font-size: 16px;
@@ -37,14 +28,9 @@
   --page-desktop-gap-side: 0;
 	--page-width: 1210px;
 	--color: #fff;
-  --color-bg: #fff;
-	--color-bg-alt: #e1dfe8;
-	--color-fg: #414f57;
-	--color-fg-bold: #313f47;
-	--color-fg-light: #616f77;
-	--color-border: #c8cccf;
-	--color-accent1: #ffa596;
-	--color-accent2: #00e4ff;
-	--color-highlight: #ff7496;
+  --color-bg: #000;
+	--color-link: #888;
+	--color-link-hover: #fff;
+	--color-border: rgba(255, 255, 255, 0.3);
 }
 

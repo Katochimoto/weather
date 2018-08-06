@@ -5,11 +5,11 @@
 }
 
 .nomatch-header {
-  color: #fff;
+  color: var(--color);
 }
 
 .nomatch-back {
-  color: #fff;
+  color: var(--color);
 }
 
 .nomatch-content {

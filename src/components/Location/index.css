@@ -25,7 +25,7 @@
     background: transparent;
     border: 0;
     padding: 0;
-    color: #888;
+    color: var(--color-link);
     cursor: pointer;
 
     @media (--tablet-viewport) {
@@ -34,7 +34,7 @@
 
     &:disabled,
     &:hover {
-      color: #fff;
+      color: var(--color-link-hover);
     }
   }
 

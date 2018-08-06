@@ -1,19 +1,2 @@
 @import "./config";
 @import "./mixins";
-
-@define-mixin page {
-  margin: 0 var(--page-mobil-gap-side);
-
-  @media (--tablet-viewport) {
-    margin: 0 var(--page-tablet-gap-side);
-  }
-
-  @media (--desktop-viewport) {
-    margin: var(--page-desktop-gap-side);
-  }
-
-  &_content {
-    lost-center: var(--page-width);
-    lost-utility: clearfix;
-  }
-}

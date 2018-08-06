@@ -23,12 +23,11 @@
       text-transform: uppercase;
       font-size: 0.8em;
       padding: 3px 8px;
-
-      color: #888;
+      color: var(--color-link);
 
       &:disabled,
       &:hover {
-        color: #fff;
+        color: var(--color-link-hover);
       }
     }
   }
