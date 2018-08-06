@@ -34,7 +34,6 @@
   body {
     height: 100%;
     margin: 0;
-    background-color: var(--color-bg);
     /* background-image:
       url('./../images/overlay.png'),
       linear-gradient(60deg, color(var(--color-accent1) alpha(50%)) 5%, color(var(--color-accent2) alpha(35%))),
@@ -44,7 +43,8 @@
     background-position:	top left,		center center,		bottom center;
     background-attachment:	fixed,			fixed,				fixed; */
 
-    background-image: url('./../images/bg1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./../images/bg1.jpg');
+    background-color: var(--color-bg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
