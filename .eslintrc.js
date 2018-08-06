@@ -11,8 +11,7 @@ module.exports = {
             "single"
         ],
         "linebreak-style": [
-            2,
-            "unix"
+            0
         ],
         "semi": [
             2,
