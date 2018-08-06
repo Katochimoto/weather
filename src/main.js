@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
 
 // @if NODE_ENV='production'
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/weather/sw.js', {
+  navigator.serviceWorker.register('/weather/weather-sw.js', {
     scope: '/weather/'
   })
 }

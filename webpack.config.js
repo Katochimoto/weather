@@ -260,7 +260,7 @@ const config = {
     (isDev ? null : new SWPrecacheWebpackPlugin({
       cacheId: 'rikishi-weather',
       dontCacheBustUrlsMatching: /\.\w{8}\./,
-      filename: 'sw.js',
+      filename: 'weather-sw.js',
       minify: !isDev,
       navigateFallback: homepage + '/index.html',
       staticFileGlobsIgnorePatterns: [
